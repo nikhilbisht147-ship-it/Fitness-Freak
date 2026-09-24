@@ -1,0 +1,500 @@
+/* ==========================================================================
+   FITNESS FREAK - PURE CSS & BOOTSTRAP STYLING
+   ========================================================================== */
+
+   :root {
+    --bg-main: #0c0f12;
+    --bg-darker: #13171d;
+    --bg-card: #181d24;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent-lime: #10b981;
+    --accent-lime-hover: #059669;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --font-heading: 'Oswald', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --transition: all 0.3s ease;
+  }
+  
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+  
+  body {
+    font-family: var(--font-body);
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  
+  /* Typography Helpers */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  
+  .text-lime {
+    color: var(--accent-lime) !important;
+  }
+  
+  .bg-darker {
+    background-color: var(--bg-darker);
+  }
+  
+  .text-muted-custom {
+    color: var(--text-muted);
+  }
+  
+  .letter-spacing-1 {
+    letter-spacing: 2px;
+  }
+  
+  .section-padding {
+    padding: 90px 0;
+  }
+  
+  .section-tag {
+    color: var(--accent-lime);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+  
+  .section-heading {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+  }
+  
+  .section-heading span {
+    color: var(--accent-lime);
+  }
+  
+  .max-w-600 {
+    max-width: 600px;
+  }
+  
+  /* Custom Buttons */
+  .btn-lime {
+    background-color: var(--accent-lime);
+    color: #000;
+    font-weight: 700;
+    border-radius: 8px;
+    border: none;
+    transition: var(--transition);
+  }
+  
+  .btn-lime:hover {
+    background-color: var(--accent-lime-hover);
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+  }
+  
+  .btn-outline-lime {
+    border: 1px solid var(--accent-lime);
+    color: var(--accent-lime);
+    font-weight: 700;
+    border-radius: 8px;
+    transition: var(--transition);
+  }
+  
+  .btn-outline-lime:hover {
+    background-color: var(--accent-lime);
+    color: #000;
+  }
+  
+  /* Fixed Modern Navbar */
+  .custom-nav {
+    background: rgba(12, 15, 18, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 14px 0;
+    z-index: 1050;
+  }
+  
+  .brand-logo {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  
+  .brand-logo span {
+    color: var(--accent-lime);
+  }
+  
+  .navbar-nav .nav-link {
+    color: var(--text-muted);
+    font-weight: 600;
+    padding: 8px 16px;
+    transition: var(--transition);
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: var(--accent-lime);
+  }
+  
+  /* Hero Carousel */
+  .hero-carousel {
+    margin-top: 60px;
+    background-color: var(--bg-main);
+  }
+  
+  .min-vh-hero {
+    min-height: calc(100vh - 80px);
+    padding: 40px 0;
+  }
+  
+  .badge-pill {
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--accent-lime);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  
+  .hero-title {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+  
+  .hero-title span {
+    color: var(--accent-lime);
+  }
+  
+  .hero-desc {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    max-width: 520px;
+  }
+  
+  .hero-slide-img {
+    max-height: 520px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* About Grid */
+  .about-stats {
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 0;
+  }
+  
+  .stat-number {
+    color: var(--accent-lime);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  
+  .stat-label {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+  
+  .stat-divider {
+    width: 1px;
+    background-color: var(--border-color);
+  }
+  
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .about-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: var(--transition);
+  }
+  
+  .about-img:hover {
+    transform: scale(1.03);
+  }
+  
+  .img1 { border-radius: 40px 4px 4px 4px; }
+  .img2 { border-radius: 4px 4px 4px 4px; }
+  .img3 { border-radius: 4px 4px 4px 4px; }
+  .img4 { border-radius: 4px 4px 40px 4px; }
+  
+  /* Trainers Cards */
+  .trainer-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+  }
+  
+  .trainer-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(16, 185, 129, 0.4);
+  }
+  
+  .trainer-media {
+    height: 260px;
+    overflow: hidden;
+  }
+  
+  .trainer-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .trainer-body {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .trainer-name {
+    font-size: 1.3rem;
+    margin-bottom: 4px;
+  }
+  
+  .trainer-role {
+    color: var(--accent-lime);
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  
+  .trainer-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+  
+  /* Membership Pricing Cards */
+  .plan-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    transition: var(--transition);
+  }
+  
+  .plan-card:hover {
+    transform: translateY(-6px);
+  }
+  
+  .featured-plan {
+    border: 2px solid var(--accent-lime);
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.15);
+  }
+  
+  .featured-badge {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: #000;
+    color: var(--accent-lime);
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 20px;
+  }
+  
+  .plan-header {
+    padding: 24px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .header-blue { background-color: #0284c7; }
+  .header-gray { background-color: #475569; }
+  .header-orange { background-color: #ea580c; }
+  .header-green { background-color: #15803d; }
+  
+  .plan-title {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+  
+  .plan-price {
+    font-size: 2.2rem;
+    font-weight: 800;
+  }
+  
+  .plan-price span {
+    font-size: 0.85rem;
+    font-weight: 400;
+    opacity: 0.85;
+  }
+  
+  .plan-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+  }
+  
+  .plan-features li {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .plan-features li.disabled {
+    color: rgba(148, 163, 184, 0.4);
+  }
+  
+  /* Contact Us Section */
+  .contact-banner {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  
+  .contact-banner-title {
+    font-size: 2.5rem;
+    color: #fff;
+  }
+  
+  .contact-banner-sub {
+    color: var(--text-muted);
+    max-width: 440px;
+  }
+  
+  .contact-banner-img {
+    max-height: 260px;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  
+  .contact-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 35px 20px;
+    transition: var(--transition);
+    height: 100%;
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(16, 185, 129, 0.4);
+  }
+  
+  .contact-icon-circle {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--accent-lime);
+    display: grid;
+    place-items: center;
+    font-size: 1.4rem;
+    margin: 0 auto 16px auto;
+  }
+  
+  .contact-link {
+    color: var(--accent-lime);
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  .contact-link:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    display: grid;
+    place-items: center;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  
+  .social-icon:hover {
+    background: var(--accent-lime);
+    color: #000;
+    transform: translateY(-3px);
+  }
+  
+  /* Modal Customization */
+  .custom-modal {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: #fff;
+    border-radius: 14px;
+  }
+  
+  .custom-input {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  
+  .custom-input:focus {
+    background-color: var(--bg-main);
+    border-color: var(--accent-lime);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+    color: #fff;
+  }
+  
+  .footer {
+    border-top: 1px solid var(--border-color);
+    background-color: var(--bg-main);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 991px) {
+    .hero-slide-img {
+      max-height: 380px;
+    }
+    .about-img {
+      height: 180px;
+    }
+  }

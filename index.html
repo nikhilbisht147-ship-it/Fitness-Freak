@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FITNESS FREAK | Build Your Legacy</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top custom-nav">
+    <div class="container">
+      <a class="navbar-brand brand-logo" href="#">
+        <i class="fa-solid fa-bolt text-lime me-2"></i>FITNESS<span>FREAK</span>
+      </a>
+
+      <!-- Hamburger Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Nav Links -->
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#trainers">Trainers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#membership">Membership</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+          <li class="nav-item ms-lg-2 mt-3 mt-lg-0">
+            <!-- Modal Trigger Button -->
+            <button type="button" class="btn btn-lime px-4" data-bs-toggle="modal" data-bs-target="#loginModal">
+              <i class="fa-solid fa-user me-2"></i>Login
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Carousel Section -->
+  <section id="hero" class="carousel slide hero-carousel" data-bs-ride="carousel">
+    <!-- Carousel Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#hero" data-bs-slide-to="0" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#hero" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#hero" data-bs-slide-to="2"></button>
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="container">
+          <div class="row align-items-center min-vh-hero">
+            <div class="col-lg-6 hero-text text-center text-lg-start">
+              <span class="badge-pill mb-3 d-inline-block">WELCOME TO FITNESS FREAK</span>
+              <h1 class="hero-title">TRANSFORM YOUR <span>FITNESS</span> JOURNEY</h1>
+              <p class="hero-desc">Achieve your health and fitness goals with the ultimate personal trainer in your pocket and elite equipment on the floor.</p>
+              <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                <a href="#membership" class="btn btn-lime btn-lg">View Plans</a>
+                <a href="https://play.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-lg">
+                  <i class="fa-brands fa-google-play me-2"></i>Get App Now
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6 hero-image text-center mt-4 mt-lg-0">
+              <img src="photo30.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=700&auto=format&fit=crop&q=80'" alt="Athlete Training" class="img-fluid hero-slide-img">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="container">
+          <div class="row align-items-center min-vh-hero">
+            <div class="col-lg-6 hero-text text-center text-lg-start">
+              <span class="badge-pill mb-3 d-inline-block">PUSH BEYOND LIMITS</span>
+              <h1 class="hero-title">BUILD UNSTOPPABLE <span>POWER</span> & GRIT</h1>
+              <p class="hero-desc">Olympic platforms, heavy iron, and high-intensity conditioning facilities built for lifters who never settle.</p>
+              <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                <a href="#membership" class="btn btn-lime btn-lg">Join Today</a>
+                <a href="#trainers" class="btn btn-outline-light btn-lg">Our Coaches</a>
+              </div>
+            </div>
+            <div class="col-lg-6 hero-image text-center mt-4 mt-lg-0">
+              <img src="photo42.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=700&auto=format&fit=crop&q=80'" alt="Powerlifting" class="img-fluid hero-slide-img">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="container">
+          <div class="row align-items-center min-vh-hero">
+            <div class="col-lg-6 hero-text text-center text-lg-start">
+              <span class="badge-pill mb-3 d-inline-block">HOLISTIC WELLNESS</span>
+              <h1 class="hero-title">GUIDED BY <span>EXPERT</span> MENTORS</h1>
+              <p class="hero-desc">Custom macro diet plans, biomechanic assessments, and community classes designed for long-term health.</p>
+              <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                <a href="#membership" class="btn btn-lime btn-lg">Start Free Trial</a>
+                <a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>
+              </div>
+            </div>
+            <div class="col-lg-6 hero-image text-center mt-4 mt-lg-0">
+              <img src="photo28.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=700&auto=format&fit=crop&q=80'" alt="Group Fitness" class="img-fluid hero-slide-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#hero" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#hero" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="section-padding bg-darker">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <p class="section-tag">ABOUT US</p>
+          <h2 class="section-heading mb-4">Building India's Largest <span>Full-Stack</span> Fitness Ecosystem</h2>
+          <p class="text-muted-custom mb-4">
+            Revolutionize fitness in India with a comprehensive ecosystem offering state-of-the-art gyms, personalized training, and inclusive solutions for all. By combining modern engineering with world-class athletic experience, we give you the tools to succeed.
+          </p>
+
+          <div class="about-stats d-flex gap-4 mb-4">
+            <div class="stat-box">
+              <h3 class="stat-number">24/7</h3>
+              <p class="stat-label">Gym Access</p>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-box">
+              <h3 class="stat-number">50+</h3>
+              <p class="stat-label">Modern Machines</p>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-box">
+              <h3 class="stat-number">10K+</h3>
+              <p class="stat-label">Transformations</p>
+            </div>
+          </div>
+
+          <a href="#membership" class="btn btn-lime px-4 py-2">Get Started Today</a>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="about-grid">
+            <img src="photo6.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&auto=format&fit=crop&q=80'" alt="Gym Floor" class="about-img img1">
+            <img src="photo7.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&auto=format&fit=crop&q=80'" alt="Weights Area" class="about-img img2">
+            <img src="photo8.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500&auto=format&fit=crop&q=80'" alt="Training Space" class="about-img img3">
+            <img src="photo10.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=500&auto=format&fit=crop&q=80'" alt="Cardio Studio" class="about-img img4">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trainers Section -->
+  <section id="trainers" class="section-padding">
+    <div class="container">
+      <div class="text-center max-w-600 mx-auto mb-5">
+        <p class="section-tag">OUR EXPERTS</p>
+        <h2 class="section-heading">Certified <span>Trainers</span></h2>
+        <p class="text-muted-custom">Work alongside certified coaches dedicated to perfecting your technique and optimizing your progress.</p>
+      </div>
+
+      <!-- Row 1 -->
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="trainer-card">
+            <div class="trainer-media">
+              <img src="photo20.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=500&auto=format&fit=crop&q=80'" alt="Brad Schoenfeld">
+            </div>
+            <div class="trainer-body">
+              <h4 class="trainer-name">Brad Schoenfeld</h4>
+              <span class="trainer-role">Hypertrophy Coach</span>
+              <p class="trainer-text">Specialized in scientific muscle hypertrophy, mechanical tension training, and body composition transformation.</p>
+              <a href="#contact" class="btn btn-outline-lime w-100">Book Session</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="trainer-card">
+            <div class="trainer-media">
+              <img src="photo23.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80'" alt="Matt Roberts">
+            </div>
+            <div class="trainer-body">
+              <h4 class="trainer-name">Matt Roberts</h4>
+              <span class="trainer-role">Conditioning Specialist</span>
+              <p class="trainer-text">Dedicated to Olympic lift mechanics, cardiovascular engine building, and high-intensity interval performance.</p>
+              <a href="#contact" class="btn btn-outline-lime w-100">Book Session</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="trainer-card">
+            <div class="trainer-media">
+              <img src="photo22.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507398941214-572c25f4b1dc?w=500&auto=format&fit=crop&q=80'" alt="Shaun Stafford">
+            </div>
+            <div class="trainer-body">
+              <h4 class="trainer-name">Shaun Stafford</h4>
+              <span class="trainer-role">Strength & Posture Coach</span>
+              <p class="trainer-text">Expert in posture restoration, core stability, joint recovery routines, and functional mobility workouts.</p>
+              <a href="#contact" class="btn btn-outline-lime w-100">Book Session</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="trainer-card">
+            <div class="trainer-media">
+              <img src="photo19.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=80'" alt="Scott Laidler">
+            </div>
+            <div class="trainer-body">
+              <h4 class="trainer-name">Scott Laidler</h4>
+              <span class="trainer-role">Fat Loss Consultant</span>
+              <p class="trainer-text">Focusing on sustainable calorie expenditure, healthy nutritional habits, and physique recomposition.</p>
+              <a href="#contact" class="btn btn-outline-lime w-100">Book Session</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="trainer-card">
+            <div class="trainer-media">
+              <img src="photo21.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&auto=format&fit=crop&q=80'" alt="Benjamin Stone">
+            </div>
+            <div class="trainer-body">
+              <h4 class="trainer-name">Benjamin Stone</h4>
+              <span class="trainer-role">Athletic Performance</span>
+              <p class="trainer-text">Trains track sprinters, soccer players, and combat athletes for peak sprint velocity and power output.</p>
+              <a href="#contact" class="btn btn-outline-lime w-100">Book Session</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="trainer-card">
+            <div class="trainer-media">
+              <img src="photo24.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=500&auto=format&fit=crop&q=80'" alt="Joe Dowdell">
+            </div>
+            <div class="trainer-body">
+              <h4 class="trainer-name">Joe Dowdell</h4>
+              <span class="trainer-role">Longevity & Rehab</span>
+              <p class="trainer-text">Specialized in rotator cuff durability, lower-back resilience, and pain-free heavy barbell movement patterns.</p>
+              <a href="#contact" class="btn btn-outline-lime w-100">Book Session</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Membership Pricing Section -->
+  <section id="membership" class="section-padding bg-darker">
+    <div class="container">
+      <div class="text-center max-w-600 mx-auto mb-5">
+        <p class="section-tag">CHOOSE YOUR PLAN</p>
+        <h2 class="section-heading">Flexible <span>Memberships</span></h2>
+        <p class="text-muted-custom">100 days money-back guarantee — zero questions asked.</p>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- Plan 1: Free Trial -->
+        <div class="col-lg-3 col-md-6">
+          <div class="plan-card">
+            <div class="plan-header header-blue">
+              <h3 class="plan-title">Free Trial</h3>
+              <div class="plan-price">$0 <span>/ 1 mo</span></div>
+            </div>
+            <div class="plan-body">
+              <ul class="plan-features">
+                <li><i class="fa-solid fa-check text-lime"></i> 1 Month Free Access</li>
+                <li><i class="fa-solid fa-check text-lime"></i> Full Equipment Access</li>
+                <li><i class="fa-solid fa-check text-lime"></i> 24 Hours Open</li>
+                <li class="disabled"><i class="fa-solid fa-xmark"></i> Dedicated Trainer</li>
+                <li class="disabled"><i class="fa-solid fa-xmark"></i> Customized Diet Plans</li>
+                <li class="disabled"><i class="fa-solid fa-xmark"></i> Yoga & Zumba Classes</li>
+              </ul>
+              <button class="btn btn-outline-light w-100 mt-auto">Start Free</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Plan 2: Enterprise (6 Months) -->
+        <div class="col-lg-3 col-md-6">
+          <div class="plan-card">
+            <div class="plan-header header-gray">
+              <h3 class="plan-title">Enterprise</h3>
+              <div class="plan-price">$50 <span>/ 6 mo</span></div>
+            </div>
+            <div class="plan-body">
+              <ul class="plan-features">
+                <li><i class="fa-solid fa-check text-lime"></i> 6 Months Membership</li>
+                <li><i class="fa-solid fa-check text-lime"></i> Full Equipment Access</li>
+                <li><i class="fa-solid fa-check text-lime"></i> 24 Hours Open</li>
+                <li><i class="fa-solid fa-check text-lime"></i> 1 PT Session / Month</li>
+                <li><i class="fa-solid fa-check text-lime"></i> Floor Trainer Assistance</li>
+                <li class="disabled"><i class="fa-solid fa-xmark"></i> No Diet Plans</li>
+              </ul>
+              <button class="btn btn-outline-light w-100 mt-auto">Choose Plan</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Plan 3: Plus (1 Year) -->
+        <div class="col-lg-3 col-md-6">
+          <div class="plan-card">
+            <div class="plan-header header-orange">
+              <h3 class="plan-title">Plus</h3>
+              <div class="plan-price">$100 <span>/ 1 yr</span></div>
+            </div>
+            <div class="plan-body">
+              <ul class="plan-features">
+                <li><i class="fa-solid fa-check text-lime"></i> 1 Year Membership</li>
+                <li><i class="fa-solid fa-check text-lime"></i> Full Equipment Access</li>
+                <li><i class="fa-solid fa-check text-lime"></i> 24 Hours Open</li>
+                <li><i class="fa-solid fa-check text-lime"></i> 2 PT Sessions / Month</li>
+                <li><i class="fa-solid fa-check text-lime"></i> Locker & Shower Facilities</li>
+                <li class="disabled"><i class="fa-solid fa-xmark"></i> Custom Diet Plans</li>
+              </ul>
+              <button class="btn btn-outline-light w-100 mt-auto">Choose Plan</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Plan 4: Standard / Elite (Best Value) -->
+        <div class="col-lg-3 col-md-6">
+          <div class="plan-card featured-plan">
+            <div class="featured-badge">MOST POPULAR</div>
+            <div class="plan-header header-green">
+              <h3 class="plan-title">Standard</h3>
+              <div class="plan-price">$170 <span>/ 1 yr</span></div>
+            </div>
+            <div class="plan-body">
+              <ul class="plan-features">
+                <li><i class="fa-solid fa-check text-lime"></i> 1 Year Full Membership</li>
+                <li><i class="fa-solid fa-check text-lime"></i> 24/7 Global Gym Access</li>
+                <li><i class="fa-solid fa-check text-lime"></i> Dedicated Personal Trainer</li>
+                <li><i class="fa-solid fa-check text-lime"></i> Personalized Macro Diet Plan</li>
+                <li><i class="fa-solid fa-check text-lime"></i> Weekly Zumba & Yoga Classes</li>
+                <li><i class="fa-solid fa-check text-lime"></i> Free Guest Passes (2/mo)</li>
+              </ul>
+              <button class="btn btn-lime w-100 mt-auto">Get Standard</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section id="contact" class="section-padding">
+    <div class="container">
+      <div class="contact-banner mb-5 text-center text-md-start">
+        <div class="row align-items-center">
+          <div class="col-md-7 p-4 p-lg-5">
+            <h2 class="contact-banner-title">Get In Touch</h2>
+            <p class="contact-banner-sub">Want to get in touch? We'd love to hear from you. Here is how you can reach our team directly.</p>
+          </div>
+          <div class="col-md-5 text-center d-none d-md-block">
+            <img src="photo44.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=500&auto=format&fit=crop&q=80'" alt="Gym Front Desk" class="img-fluid contact-banner-img">
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="contact-card text-center">
+            <div class="contact-icon-circle"><i class="fa-solid fa-phone"></i></div>
+            <h5 class="fw-bold mb-2">Phone</h5>
+            <p class="text-muted-custom small">Have a query? Just pick up the phone to chat with our front-desk advisors.</p>
+            <a href="tel:+919000202020" class="contact-link">+91 90002 02020</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="contact-card text-center">
+            <div class="contact-icon-circle"><i class="fa-solid fa-envelope"></i></div>
+            <h5 class="fw-bold mb-2">Email</h5>
+            <p class="text-muted-custom small">Prefer email? Send your inquiry to our support and corporate team.</p>
+            <a href="mailto:businessinfo@fitnessfreak.com" class="contact-link">businessinfo@fitnessfreak.com</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="contact-card text-center">
+            <div class="contact-icon-circle"><i class="fa-solid fa-location-dot"></i></div>
+            <h5 class="fw-bold mb-2">Address</h5>
+            <p class="text-muted-custom small">Visit our club, tour the floor, and test out our equipment in person.</p>
+            <span class="text-lime fw-bold d-block">Makarpura, Vadodara, Gujarat</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="social-wrapper text-center mt-5">
+        <h6 class="text-muted-custom mb-3 text-uppercase letter-spacing-1">Follow Our Journey</h6>
+        <div class="d-flex justify-content-center gap-3">
+          <a class="social-icon" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a class="social-icon" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a class="social-icon" href="https://in.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a class="social-icon" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-4">
+    <div class="container text-center">
+      <p class="text-muted-custom mb-0 small">&copy; 2026 FITNESS FREAK. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content custom-modal">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold" id="loginModalLabel">Member Login</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form>
+            <div class="mb-3">
+              <label for="email" class="form-label text-muted-custom">Email or Username</label>
+              <input type="email" class="form-control custom-input" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label text-muted-custom">Password</label>
+              <input type="password" class="form-control custom-input" id="password" placeholder="Enter your password" required>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="rememberMe">
+                <label class="form-check-label text-muted-custom small" for="rememberMe">Remember me</label>
+              </div>
+              <a href="#" class="text-lime text-decoration-none small">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn btn-lime w-100 py-2">Login</button>
+          </form>
+        </div>
+        <div class="modal-footer border-0 pt-0 text-center justify-content-center">
+          <p class="text-muted-custom small mb-0">Don't have an account? <a href="#" class="text-lime text-decoration-none fw-bold">Sign Up</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 Bundle JS (Handles modals, toggles, & carousel automatically) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
