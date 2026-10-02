@@ -35,11 +35,25 @@
     overflow-x: hidden;
   }
   
+  /* Ensure containers have padding on small screens so text never touches the screen edge */
+  .container,
+  .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
   /* Typography Helpers */
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     letter-spacing: 0.5px;
     text-transform: uppercase;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+  
+  p, span, a, li {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
   
   .text-lime {
@@ -164,6 +178,7 @@
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 1px;
+    display: inline-block;
   }
   
   .hero-title {
@@ -185,6 +200,7 @@
   }
   
   .hero-slide-img {
+    width: 100%;
     max-height: 520px;
     object-fit: cover;
     border-radius: 20px;
@@ -400,6 +416,7 @@
   }
   
   .contact-banner-img {
+    width: 100%;
     max-height: 260px;
     border-radius: 12px;
     object-fit: cover;
@@ -489,12 +506,58 @@
     background-color: var(--bg-main);
   }
   
-  /* Responsive adjustments */
+  /* ==========================================================================
+     PURE RESPONSIVE ADJUSTMENTS (Layout & Gutter Control Only)
+     ========================================================================== */
+  
   @media (max-width: 991px) {
     .hero-slide-img {
       max-height: 380px;
     }
     .about-img {
       height: 180px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    /* Fix text starting directly from screen edge */
+    .container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .section-padding {
+      padding: 60px 0;
+    }
+  
+    .min-vh-hero {
+      min-height: auto;
+      padding: 20px 0;
+    }
+  
+    /* Prevent banner padding from collapsing on mobile */
+    .contact-banner {
+      padding: 24px 16px !important;
+    }
+  
+    /* Keep stats cleanly arranged without text squishing */
+    .about-stats {
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    
+    .stat-divider {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    /* Prevent 2-column image layout from squeezing down on narrow phones */
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .about-img {
+      height: 200px;
     }
   }
